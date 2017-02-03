@@ -162,19 +162,6 @@ renderMovie movie =
         ]
 
 
-
---   [ h2 [] [ text (movie.title ++ " (" ++ (toString movie.year) ++ ")") ]
---   , grid []
---       [ cell [ Material.Grid.size All 2 ]
---           [ img [ src movie.cover ] []
---           , p [] [ text (toString movie.rating ++ "/10") ]
---           ]
---       , cell [ Material.Grid.size All 4, Material.Grid.offset All 1 ]
---           [ p [] (List.append (List.map renderTorrent movie.torrents) [ (text movie.summary) ]) ]
---       ]
---   ]
-
-
 renderTorrent : TorrentLink -> Html Msg
 renderTorrent model =
     a [ href model.url, target "_blank" ] [ Icon.i "file_download", text (model.quality ++ " (" ++ model.size ++ ") ") ]
