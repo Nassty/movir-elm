@@ -293,7 +293,7 @@ goGetFilms : Int -> String -> String -> Cmd Msg
 goGetFilms page criteria query_term =
     let
         url =
-            ("https://yts.ag/api/v2/list_movies.json?limit=50&sort_by="
+            ("https://yts.am/api/v2/list_movies.json?limit=50&sort_by="
                 ++ criteria
                 ++ "&page="
                 ++ (toString page)
